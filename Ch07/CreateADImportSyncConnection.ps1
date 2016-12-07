@@ -1,0 +1,2 @@
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq "User Profile Service Application"} 
+Add-SPProfileSyncConnection-ProfileServiceApplication $sa -ConnectionForestName "CORP.Learn-SP2016.COM" -ConnectionDomain "CORP" -ConnectionUserName "s-sync" -ConnectionPassword (ConvertTo-SecureString "<Password>" -AsPlainText -Force) -ConnectionPort 636 -ConnectionUseSSL $true -ConnectionUseDisabledFilter $true -ConnectionSynchronizationOU "OU=Employees,DC=CORP,DC=LEARN-SP2016,DC=COM"

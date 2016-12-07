@@ -1,0 +1,1 @@
+Set-SPAuthenticationRealm -realm $spocontextID

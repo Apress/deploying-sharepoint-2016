@@ -1,0 +1,2 @@
+$sa = New-SPEnterpriseSearchServiceApplication -Name "Cloud Search Service Application" -DatabaseName "CloudSearch" -ApplicationPool "SharePoint Web Services Default" -AdminApplicationPool "SharePoint Web Services Default" -CloudIndex $true 
+New-SPEnterpriseSearchServiceApplicationProxy -Name "Cloud Search Service Application" -SearchApplication $sa
