@@ -7,4 +7,4 @@ $adapter = Get-NetAdapter "Ethernet"
 $adapter | Set-NetIPAddress -Dhcp Disabled
 $adapter | New-NetIPAddress -AddressFamily IPv4 -IPAddress 192.168.5.1 -PrefixLength 24 -Type Unicast
 Rename-NetAdapter -Name "Ethernet" -NewName "Heartbeat"
-Set-DnsClient -RegisterThisConnectionAddresss $false -InterfaceAlias “Heartbeat”
+Set-DnsClient -RegisterThisConnectionsAddress $false -InterfaceAlias â€œHeartbeatâ€
